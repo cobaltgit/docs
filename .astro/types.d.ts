@@ -257,7 +257,7 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 "enhancements/Plugins/Free/luckperms.mdx": {
 	id: "enhancements/Plugins/Free/luckperms.mdx";
-  slug: "e/pl/luckperms";
+  slug: "e/pl/powerranks";
   body: string;
   collection: "docs";
   data: any
@@ -279,6 +279,13 @@ declare module 'astro:content' {
 "enhancements/Plugins/Free/playershops.mdx": {
 	id: "enhancements/Plugins/Free/playershops.mdx";
   slug: "e/pl/playershops";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"enhancements/Plugins/Free/powerranks.mdx": {
+	id: "enhancements/Plugins/Free/powerranks.mdx";
+  slug: "e/pl/luckperms";
   body: string;
   collection: "docs";
   data: any
