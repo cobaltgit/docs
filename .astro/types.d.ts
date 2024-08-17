@@ -493,6 +493,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"guides/Minecraft/sftp.mdx": {
+	id: "guides/Minecraft/sftp.mdx";
+  slug: "guides/using-sftp";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "guides/OVH/Core/ovh.mdx": {
 	id: "guides/OVH/Core/ovh.mdx";
   slug: "guides/lab/ovh";
