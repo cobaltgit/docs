@@ -2,8 +2,6 @@
 title: Minecraft Admin Wiki
 description: We're setup.md, the Minecraft administration wiki, written by enthusiasts and targeted to the novice.
 template: splash
-banner:
-  content: Download all of your Minecraft jars from one place with the <a href="https://jar.smd.gg">setup.md jar API</a>.
 hero:
   tagline: Your home of good information written by enthusiasts for the novice Minecraft server owner.
   image:
@@ -14,13 +12,13 @@ hero:
       icon: right-arrow
       variant: primary
     - text: Visit us on Github!
-      link: https://link.setup.md/repo
+      link: https://smd.gg/repo
       icon: external
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-<CardGrid>
+<CardGrid stagger>
 	<Card title="Super Fast" icon="rocket">
 		Behind the scenes our wiki has lost some weight as is built on the fastest framework to date!
 	</Card>
@@ -31,6 +29,6 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 		With V3 we now have the functionality to implement translations following the i18n standard. **SOON!**
 	</Card>
 	<Card title="Community Backed" icon="discord">
-		We're still backed by the amazing members of the [Admincraft](https://link.setup.md/acdiscord) community.
+		We're still backed by the amazing members of the [Admincraft](https://smd.gg/acdiscord) community.
 	</Card>
 </CardGrid>
