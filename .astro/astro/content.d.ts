@@ -235,6 +235,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"enhancements/Plugins/Free/MiniMOTD.mdx": {
+	id: "enhancements/Plugins/Free/MiniMOTD.mdx";
+  slug: "e/pl/minimotd";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "enhancements/Plugins/Free/auctionhouse.mdx": {
 	id: "enhancements/Plugins/Free/auctionhouse.mdx";
   slug: "e/pl/auctionhouse";
@@ -273,13 +280,6 @@ declare module 'astro:content' {
 "enhancements/Plugins/Free/luckperms.mdx": {
 	id: "enhancements/Plugins/Free/luckperms.mdx";
   slug: "e/pl/powerranks";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".mdx"] };
-"enhancements/Plugins/Free/minimotd.mdx": {
-	id: "enhancements/Plugins/Free/minimotd.mdx";
-  slug: "e/pl/minimotd";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -518,6 +518,13 @@ declare module 'astro:content' {
 "guides/Minecraft/Self-Host/Standalone (Java)/win.mdx": {
 	id: "guides/Minecraft/Self-Host/Standalone (Java)/win.mdx";
   slug: "guides/self-host/win";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"guides/Minecraft/advertising.mdx": {
+	id: "guides/Minecraft/advertising.mdx";
+  slug: "guides/advertising";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -852,5 +859,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../../src/content/config.js");
+	export type ContentConfig = typeof import("./../../src/content/config.js");
 }
