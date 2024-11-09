@@ -19,7 +19,7 @@ export default defineConfig({
         baseUrl: "https://github.com/setupmd/docs/edit/v3",
       },
       social: {
-        discord: "https://discord.gg/pXaQgzneed",
+        discord: "http://www.setup.md/discord-invite",
         github: "https://github.com/setupmd/docs",
       },
       sidebar: [
