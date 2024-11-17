@@ -19,8 +19,8 @@ export default defineConfig({
         baseUrl: "https://github.com/setupmd/docs/edit/v3",
       },
       social: {
-        discord: "https://smd.gg/discord",
-        github: "https://smd.gg/repo",
+        discord: "http://www.setup.md/discord-invite",
+        github: "https://github.com/setupmd/docs",
       },
       sidebar: [
         {
