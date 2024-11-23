@@ -24,6 +24,10 @@ export default defineConfig({
         }),
       ],
       title: "setup.md",
+      customCss: [
+        './src/styles/custom.css',
+        './src/fonts/font-face.css',
+      ],
       logo: {
         replacesTitle: true,
         light: "./src/assets/logo-dark.png",
