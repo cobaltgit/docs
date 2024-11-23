@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
-
+import starlightThemeObsidian from "starlight-theme-obsidian";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
@@ -14,7 +14,21 @@ export default defineConfig({
   },
   integrations: [
     starlight({
+      plugins: [
+        starlightThemeObsidian({
+          graphConfig: {
+            depth: 1,
+            depthDirection: "both",
+            repelForce: 500,
+          },
+        }),
+      ],
       title: "setup.md",
+      logo: {
+        replacesTitle: true,
+        light: "./src/assets/logo-dark.png",
+        dark: "./src/assets/logo-light.png",
+      },
       editLink: {
         baseUrl: "https://github.com/setupmd/docs/edit/v3",
       },
