@@ -2,6 +2,7 @@
 description: If you're just looking to setup a Minecraft server within Linux on your own personal machine then this is the tutorial for you.
 slug: guides/self-host/linux
 title: Linux
+lastUpdated: 2024-11-23
 ---
 
 If you're in the position where you want to host a Minecraft server but you don't want to learn or interface with the command line too frequently then Windows will most likely be your OS of choice either on your own PC or a spare machine you have around the house.
@@ -43,34 +44,39 @@ This should result in the following output.
 Sorting... Done
 Full Text Search... Done
 
-default-jre-headless/stable,stable 2:1.11-72 amd64
+default-jre-headless/noble 2:1.21-75+exp1 amd64
   Standard Java or Java compatible Runtime (headless)
 
-openjdk-11-jre-headless/stable,stable-security,stable,stable-security 11.0.14+9-1~deb11u1 amd64
+openjdk-8-jre-headless/noble-updates,noble-security 8u432-ga~us1-0ubuntu2~24.04 amd64
   OpenJDK Java runtime, using Hotspot JIT (headless)
 
-openjdk-17-jre-headless/stable,stable-security,stable,stable-security 17.0.2+8-1~deb11u1 amd64
+openjdk-11-jre-headless/noble-updates,noble-security 11.0.25+9-1ubuntu1~24.04 amd64
+  OpenJDK Java runtime, using Hotspot JIT (headless)
+
+openjdk-17-jre-headless/noble-updates,noble-security 17.0.13+11-2ubuntu1~24.04 amd64
+  OpenJDK Java runtime, using Hotspot JIT (headless)
+
+openjdk-21-jre-headless/noble-updates,noble-security 21.0.5+11-1ubuntu1~24.04 amd64
   OpenJDK Java runtime, using Hotspot JIT (headless)
 
 ...
 ```
 
 :::info
-Java 16 was not an LTS release and therefore isn't present in the list.
 
-You can now run the following command changing the `version-number` to determine if you would like to install Java 8, Java 11 or Java 17.
+You can now run the following command changing the `version-number` to determine if you would like to install Java 8, Java 11, Java 17 or Java 21.
 
 :::
 
 ```bash
 ...
 
-sudo apt install "openjdk-17-jre-headless" -y
+sudo apt install "openjdk-21-jre-headless" -y
 
 ...
 ```
 
-The above command will install Java 17 and will allow for us to create a server using the latest builds. You can confirm this has installed successfully by running the following command.
+The above command will install Java 21 and will allow for us to create a server using the latest builds. You can confirm this has installed successfully by running the following command.
 
 ```java
 ...
@@ -97,12 +103,12 @@ cd minecraft-server-folder
 ...
 ```
 
-Now we can deploy the server jar we're wanting to use, this tutorial will reference [purpur](https://purpurmc.org) but there are plenty of other server platforms and [this page](/t/server-software) explains the pros and cons of the major ones.
+Now we can deploy the server jar we're wanting to use, this tutorial will reference [paper](https://papermc.io) but there are plenty of other server platforms and [this page](/t/server-software) explains the pros and cons of the major ones.
 
 ```bash
 ...
 
-wget https://jar.smd.gg/download/purpur/latest/latest --content-disposition
+wget https://jar.setup.md/download/paper/latest/latest --content-disposition
 
 ...
 ```
@@ -114,7 +120,7 @@ To confirm the file has downloaded correctly you can use the `ls -al` command to
 ```bash
 ...
 
--rw-r--r-- 1 root root 42329978 Jul  9 08:07 purpur-1.20.1-2058.jar
+-rw-r--r--  1 root root 50871572 Nov 22 12:04 paper-1.21.3-48.jar
 
 ...
 ```
@@ -134,7 +140,7 @@ We can now run the following command from the console in order to start our serv
 ```bash
 ...
 
-java -Xmx4G -Xms4G -jar purpur-1.20.1-2058.jar nogui
+java -Xmx4G -Xms4G -jar paper-1.21.3-48.jar nogui
 
 ...
 ```
@@ -179,7 +185,7 @@ Switching back to the server, you should now be able to start the server again u
 ```bash
 ...
 
-java -Xmx4G -Xms4G -jar purpur-1.20.1-2058.jar nogui
+java -Xmx4G -Xms4G -jar paper-1.21.3-48.jar nogui
 
 ...
 ```
@@ -214,7 +220,7 @@ Now screen has been installed you can run the following commands to launch your 
 ...
 
 screen
-java -Xmx4G -Xms4G -jar purpur-1.20.1-2058.jar nogui
+java -Xmx4G -Xms4G -jar paper-1.21.3-48.jar nogui
 
 ...
 ```
